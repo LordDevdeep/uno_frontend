@@ -47,19 +47,19 @@
                 <label for="reg-confirm">Confirm Password</label>
                 <input type="password" id="reg-confirm" name="reg-confirm" required maxlength="16" placeholder="Confirm Password">
                 <label for="reg-avatar">Choose Avatar</label>
-                <div class="avatar-select-group">
+                <div class="avatar-select-group" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; justify-items: center; align-items: center;">
                     <input type="radio" id="avatar1" name="reg-avatar" value="avatar/a1.jpg" required>
-                    <label for="avatar1"><img src="avatar/a1.jpg" alt="Avatar 1" class="avatar-img"></label>
+                    <label for="avatar1"><img src="avatar/a1.jpg" alt="Avatar 1" class="avatar-img" style="width:64px;height:64px;"></label>
                     <input type="radio" id="avatar2" name="reg-avatar" value="avatar/a2.jpg">
-                    <label for="avatar2"><img src="avatar/a2.jpg" alt="Avatar 2" class="avatar-img"></label>
+                    <label for="avatar2"><img src="avatar/a2.jpg" alt="Avatar 2" class="avatar-img" style="width:64px;height:64px;"></label>
                     <input type="radio" id="avatar3" name="reg-avatar" value="avatar/a3.jpg">
-                    <label for="avatar3"><img src="avatar/a3.jpg" alt="Avatar 3" class="avatar-img"></label>
+                    <label for="avatar3"><img src="avatar/a3.jpg" alt="Avatar 3" class="avatar-img" style="width:64px;height:64px;"></label>
                     <input type="radio" id="avatar4" name="reg-avatar" value="avatar/a4.jpg">
-                    <label for="avatar4"><img src="avatar/a4.jpg" alt="Avatar 4" class="avatar-img"></label>
+                    <label for="avatar4"><img src="avatar/a4.jpg" alt="Avatar 4" class="avatar-img" style="width:64px;height:64px;"></label>
                     <input type="radio" id="avatar5" name="reg-avatar" value="avatar/a5.jpg">
-                    <label for="avatar5"><img src="avatar/a5.jpg" alt="Avatar 5" class="avatar-img"></label>
+                    <label for="avatar5"><img src="avatar/a5.jpg" alt="Avatar 5" class="avatar-img" style="width:64px;height:64px;"></label>
                     <input type="radio" id="avatar6" name="reg-avatar" value="avatar/a6.jpg">
-                    <label for="avatar6"><img src="avatar/a6.jpg" alt="Avatar 6" class="avatar-img"></label>
+                    <label for="avatar6"><img src="avatar/a6.jpg" alt="Avatar 6" class="avatar-img" style="width:64px;height:64px;"></label>
                 </div>
                 <button type="submit" class="btn" style="display:block;margin:1.2rem auto 0 auto;">Register</button>
                 <div id="register-error" class="error-message"></div>
@@ -195,24 +195,25 @@
             <button class="btn back-btn" id="back-to-home-profile">Back</button>
             <h2>Player Profile</h2>
             <div class="profile-content">
-                <div class="profile-avatar-section">
-                    <img id="profile-avatar-large" src="a1.jpg" alt="Avatar" class="avatar-img" style="width:72px;height:72px;">
-                    <form id="change-avatar-form">
-                        <div class="avatar-select-group">
-                            <input type="radio" id="profile-avatar1" name="profile-avatar" value="a1.jpg" required>
-                            <label for="profile-avatar1"><img src="a1.jpg" alt="Avatar 1" class="avatar-img"></label>
-                            <input type="radio" id="profile-avatar2" name="profile-avatar" value="a2.jpg">
-                            <label for="profile-avatar2"><img src="a2.jpg" alt="Avatar 2" class="avatar-img"></label>
-                            <input type="radio" id="profile-avatar3" name="profile-avatar" value="a3.jpg">
-                            <label for="profile-avatar3"><img src="a3.jpg" alt="Avatar 3" class="avatar-img"></label>
-                            <input type="radio" id="profile-avatar4" name="profile-avatar" value="a4.jpg">
-                            <label for="profile-avatar4"><img src="a4.jpg" alt="Avatar 4" class="avatar-img"></label>
-                            <input type="radio" id="profile-avatar5" name="profile-avatar" value="a5.jpg">
-                            <label for="profile-avatar5"><img src="a5.jpg" alt="Avatar 5" class="avatar-img"></label>
-                            <input type="radio" id="profile-avatar6" name="profile-avatar" value="a6.jpg">
-                            <label for="profile-avatar6"><img src="a6.jpg" alt="Avatar 6" class="avatar-img"></label>
+                <div class="profile-avatar-section" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+                    <img id="profile-avatar-large" src="a1.jpg" alt="Avatar" class="avatar-img" style="width:72px;height:72px;display:block;margin:0 auto;">
+                    <div id="profile-avatar-player-name" style="color:#FFD600;font-weight:bold;font-size:1.1rem;margin-top:0.5em;text-shadow:1px 1px 4px #000;text-align:center;"></div>
+                    <form id="change-avatar-form" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+                        <div class="avatar-select-group" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; justify-items: center; align-items: center;">
+                            <input type="radio" id="profile-avatar1" name="profile-avatar" value="avatar/a1.jpg" required>
+                            <label for="profile-avatar1"><img src="avatar/a1.jpg" alt="Avatar 1" class="avatar-img" style="width:64px;height:64px;"></label>
+                            <input type="radio" id="profile-avatar2" name="profile-avatar" value="avatar/a2.jpg">
+                            <label for="profile-avatar2"><img src="avatar/a2.jpg" alt="Avatar 2" class="avatar-img" style="width:64px;height:64px;"></label>
+                            <input type="radio" id="profile-avatar3" name="profile-avatar" value="avatar/a3.jpg">
+                            <label for="profile-avatar3"><img src="avatar/a3.jpg" alt="Avatar 3" class="avatar-img" style="width:64px;height:64px;"></label>
+                            <input type="radio" id="profile-avatar4" name="profile-avatar" value="avatar/a4.jpg">
+                            <label for="profile-avatar4"><img src="avatar/a4.jpg" alt="Avatar 4" class="avatar-img" style="width:64px;height:64px;"></label>
+                            <input type="radio" id="profile-avatar5" name="profile-avatar" value="avatar/a5.jpg">
+                            <label for="profile-avatar5"><img src="avatar/a5.jpg" alt="Avatar 5" class="avatar-img" style="width:64px;height:64px;"></label>
+                            <input type="radio" id="profile-avatar6" name="profile-avatar" value="avatar/a6.jpg">
+                            <label for="profile-avatar6"><img src="avatar/a6.jpg" alt="Avatar 6" class="avatar-img" style="width:64px;height:64px;"></label>
                         </div>
-                        <button type="submit" class="btn">Change Avatar</button>
+                        <button type="submit" class="btn" style="margin-top:1.2rem;">Change Avatar</button>
                     </form>
                 </div>
                 <div class="profile-info">
