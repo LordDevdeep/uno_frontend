@@ -182,6 +182,11 @@ document.addEventListener('DOMContentLoaded', function () {
             // Set avatar radio
             const radios = changeAvatarForm.querySelectorAll('input[name="profile-avatar"]');
             radios.forEach(r => { r.checked = (r.value === currentUser.avatar); });
+            // Set player name below avatar
+            const profileAvatarPlayerName = document.getElementById('profile-avatar-player-name');
+            if (profileAvatarPlayerName) {
+                profileAvatarPlayerName.textContent = currentUser.name;
+            }
         }
     }
 
